@@ -1,0 +1,27 @@
+USE THIS ONE 
+
+for presentation
+- maybe add graphics to explain the flow of the system
+---
+
+
+to-do (after presentation)
+- add update feature to doctor records (admin dashboard)
+- find a way to display journal entries
+- find a way to reset password
+
+- connect disorder option (WindowSelectDisorder) to the database
+- adjust color scheme
+- (journal) get data from text area and save to textfile
+
+- adjust the user id, because it looks like an email
+- if record is not found, display a message related to that
+---
+
+to-do (more)
+- add a simple instruction to update, insert other smaller windows
+- improve UI and UX for the update and deletion of journal entries 
+- normalize tables
+- make journal ID=40, and journal entry-~1000
+- min of 10 records per table (find a way to do this quickly) 
+---

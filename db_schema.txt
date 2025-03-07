@@ -1,0 +1,33 @@
+
+Database schema
+===============
+database name: wellnesswave
+username: wellness
+password: wave
+
+Tables
+------
+- bill_temp
+(order_ID(PK), user_ID, account_number, card_type, price)
+
+- disorder
+(disorder_ID(PK), disorder_name, user_ID(FK)(U), doctor_ID(FK)(U))
+
+- doctor
+(doctor_ID(PK), title, doctor_name, doctor_surname, doctor_email)
+
+- journal
+(journal_ID(varchar(40)), user_ID, journal_entry(1000))
+
+- login
+(user_email(PK), user_password)
+
+- user_temp
+(user_ID(PK), user_first_name, user_last_name, user_email(FK)(U), account_type)
+---
+
+NOTES 
+- all attributes are strings (varchar(30)) except for journal_ID
+PK  -> primary key and unique
+U   -> unique
+---

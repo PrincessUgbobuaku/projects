@@ -1,0 +1,29 @@
+
+SETUP
+-----
+### Setup images and icons 
+files that have images
+* WindowInit
+* WindowHome
+---
+
+images:
+* WindowInit
+> /icons/imageicons/icons8-back-32.png for 4 panes 
+> /images/WellnessWave_Logo_resize1.png for cover pane 
+
+* WindowHome
+> /icons/imageicons/exit1.png for sidebar
+> /images/HomeBg_resize1.png for intro pane
+---
+
+- make userID and journal ID longer = 50 chars
+- remember to add derby client to pom.xml 
+- create database using 'db_schema.txt'
+- test all windows in buttons work and it database operations work
+---
+
+
+encryption
+- doesn't work
+--- 
