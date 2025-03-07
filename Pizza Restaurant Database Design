@@ -1,0 +1,670 @@
+CREATE TABLE SUPPLIER (
+    SUPPLIER_ID CHAR (6) PRIMARY KEY,
+    SUPPLIER_NAME VARCHAR (20),
+    SUPPLIER_EMAIL VARCHAR (30),
+    SUPPLIER_TYPE VARCHAR (15),
+    SUPPLIER_STREET_NUMBER VARCHAR (4),
+    SUPPLIER_STREET_NAME VARCHAR (20),
+    SUPPLIER_SUBURB VARCHAR (20),
+    SUPPLIER_CITY VARCHAR (20),
+    DATE_OF_CONTRACT DATE   
+);
+
+INSERT INTO SUPPLIER (SUPPLIER_ID, SUPPLIER_NAME, SUPPLIER_EMAIL, SUPPLIER_TYPE, SUPPLIER_STREET_NUMBER, SUPPLIER_STREET_NAME, SUPPLIER_SUBURB, SUPPLIER_CITY, DATE_OF_CONTRACT)
+VALUES
+('SUP001', 'Dairy Goods Ltd.', 'info@dairygoods.com', 'Flour Supplier', '456', 'Milk Ave', 'Creamtown', 'Springfield', '2022-06-30'),
+('SUP002', 'Fresh Produce Co.', 'contact@freshproduce.com', 'Food Supplier', 123, 'Fruit St', 'Harvest', 'Springfield', '2023-01-15'),
+('SUP003', 'Bakery Supplies Inc.', 'sales@bakerysupplies.com', 'Bakery Supplier', 789, 'Bread Rd', 'Crumbtown', 'Springfield', '2023-03-01'),
+('SUP004', 'Meat Market LLC', 'support@meatmarket.com', 'Meat Supplier', 101, 'Steak Blvd', 'Meatville', 'Springfield', '2022-12-10'),
+('SUP005', 'Spice World', 'hello@spiceworld.com', 'Spice Supplier', 202, 'Herb St', 'Flavorland', 'Springfield', '2023-02-20'),
+('SUP006', 'Beverage Partners', 'contact@beveragepartners.com', 'Beverage Supplier', 303, 'Drink Dr', 'Thirstytown', 'Springfield', '2021-11-05'),
+('SUP007', 'Packaged Foods Inc.', 'info@packagedfoods.com', 'Packaged Supplier', 404, 'Snack Ln', 'Convenience', 'Springfield', '2022-07-15'),
+('SUP008', 'Condiment Co.', 'sales@condimentco.com', 'Condiment Supplier', 505, 'Sauce St', 'Tasteville', 'Springfield', '2023-04-10'),
+('SUP009', 'Organic Grocers', 'info@organicgrocers.com', 'Organic Supplier', 606, 'Green St', 'Naturetown', 'Springfield', '2023-09-01'),
+('SUP010', 'Frozen Foods LLC', 'support@frozenfoods.com', 'Frozen Supplier', 707, 'Ice Rd', 'Chilltown', 'Springfield', '2022-10-20');
+
+
+CREATE TABLE USER (
+    USER_ID CHAR (9) PRIMARY KEY,
+    USER_PASSWORD VARCHAR (20),
+    USER_EMAIL_ADDRESS VARCHAR (30),
+    USER_NAME VARCHAR (15),
+    USER_SURNAME VARCHAR (20),
+    USER_STREET_NUMBER VARCHAR (4),
+    USER_STREET_NAME VARCHAR (20),
+    USER_SUBURB VARCHAR (20),
+    USER_CITY VARCHAR (20),
+    USER_ROLE VARCHAR (5)  
+);
+
+INSERT INTO USER (USER_ID, USER_PASSWORD, USER_EMAIL_ADDRESS, USER_NAME, USER_SURNAME, USER_STREET_NUMBER, USER_STREET_NAME, USER_SUBURB, USER_CITY, USER_ROLE) 
+VALUES 
+('PRIUGB123', 'ice747', 'priugb@gmail.com', 'Princess', 'Ugbobuaku', 404, 'Sixth Dr', 'Milnerton', 'Cape Town', 'User'),
+('JOHDOE234', 'pass123', 'john.doe@gmail.com', 'John', 'Doe', 101, 'First St', 'Townsville', 'Cape Town', 'Admin'),
+('MARSMI567', 'marypass', 'mary.smith@yahoo.com', 'Mary', 'Smith', 202, 'Second Ave', 'Suburbia', 'Cape Town', 'User'),
+('ALIBRO999', 'alice99', 'alice.brown@gmail.com', 'Alice', 'Brown', 303, 'Third Rd', 'Downtown', 'Durban', 'User'),
+('BOBJOH567', 'bobpass', 'bob.johnson@outlook.com', 'Bob', 'Johnson', 404, 'Fourth Blvd', 'Citycenter', 'Cape Town', 'User'),
+('CHAWHI901', 'charliepass', 'charlie.white@gmail.com', 'Charlie', 'White', 505, 'Fifth Lane', 'Greenfield', 'Johannesburg', 'User'),
+('EVEJON888', 'evepass', 'eve.jones@webmail.com', 'Eve', 'Jones', 606, 'Sixth St', 'Lakeside', 'Cape Town', 'User'),
+('FRAMIL002', 'frankpass', 'frank.miller@aol.com', 'Frank', 'Miller', 707, 'Seventh Ave', 'Riverdale', 'Johannesburg', 'User'),
+('GRADAV555', 'gracepass', 'grace.davis@hotmail.com', 'Grace', 'Davis', 808, 'Eighth Rd', 'Seaside', 'Cape Town', 'User'),
+('HANTHO000', 'hankpass', 'hank.thompson@gmail.com', 'Hank', 'Thompson', 909, 'Ninth Blvd', 'Hillside', 'Durban', 'User');
+--
+--
+--
+CREATE TABLE CUSTOMER (
+    CUSTOMER_ID CHAR (6) PRIMARY KEY,
+    CUSTOMER_NAME VARCHAR (15),
+    CUSTOMER_SURNAME VARCHAR (20),
+    CUSTOMER_PHONE CHAR (10),
+    CUSTOMER_EMAIL VARCHAR (30),
+    CUSTOMER_STREET_NUMBER INTEGER,
+    CUSTOMER_STREET_NAME VARCHAR (20),
+    CUSTOMER_SUBURB VARCHAR (20),
+    CUSTOMER_CITY VARCHAR (20)
+    );
+    
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, CUSTOMER_SURNAME, CUSTOMER_PHONE, CUSTOMER_EMAIL, CUSTOMER_STREET_NUMBER, CUSTOMER_STREET_NAME, CUSTOMER_SUBURB, CUSTOMER_CITY)
+VALUES 
+('CUST01', 'Andy', 'Tank', '0612345678', 'andy.tank@example.com', 101, 'Third Ave', 'Parklands', 'Cape Town'),
+('CUST02', 'Bob', 'Smith', '0612345678', 'bob.smith@example.com', 202, 'Second Ave', 'Suburbia', 'Cape Town'),
+('CUST03', 'Charlie', 'Brown', '0723456788', 'charlie.brown@example.com', 303, 'Third Rd', 'Citycenter', 'Cape Town'),
+('CUST04', 'Diana', 'Prince', '0824567890', 'diana.prince@example.com', 404, 'Fourth Blvd', 'Uptown', 'Cape Town'),
+('CUST05', 'Eve', 'Davis', '0835678901', 'eve.davis@example.com', 505, 'Fifth Lane', 'Riverside', 'Cape Town'),
+('CUST06', 'Frank', 'Miller', '0796789012', 'frank.miller@example.com', 606, 'Sixth St', 'Greenfield', 'Cape Town'),
+('CUST07', 'Grace', 'Lee', '0737890123', 'grace.lee@example.com', 707, 'Seventh Ave', 'Lakeside', 'Cape Town'),
+('CUST08', 'Hank', 'Taylor', '0749012345', 'hank.taylor@example.com', 808, 'Eighth Rd', 'Hillside', 'Cape Town'),
+('CUST09', 'Ivy', 'Wilson', '0760123456', 'ivy.wilson@example.com', 909, 'Ninth Blvd', 'Seaside', 'Cape Town'),
+('CUST10', 'Jack', 'Garcia', '0781234567', 'jack.garcia@example.com', 100, 'Tenth St', 'Bayview', 'Cape Town');
+
+CREATE TABLE TOPPING (
+    TOP_CODE         CHAR (6)       PRIMARY KEY,
+    TOP_NAME         VARCHAR (15),
+    TOP_DESCRIPTION  VARCHAR (25),
+    TOP_PRICE        DECIMAL (6, 2),
+    TOP_ORDER_DATE   DATE,
+    TOP_EXPIRY_DATE  DATE,
+    ALLERGEN_INFO    VARCHAR (25),
+    SUPPLIER_ID      CHAR (6), 
+    TOPPING_CALORIES INT,
+    FOREIGN KEY (SUPPLIER_ID) REFERENCES SUPPLIER(SUPPLIER_ID) ON DELETE CASCADE 
+);
+
+INSERT INTO TOPPING (TOP_CODE, TOP_NAME, TOP_DESCRIPTION, TOP_PRICE, TOP_ORDER_DATE, TOP_EXPIRY_DATE, ALLERGEN_INFO, SUPPLIER_ID, TOPPING_CALORIES)
+VALUES
+('TOP001', 'Pepperoni', 'Spicy salami', 35.99, '2024-09-28', '2024-10-05', 'Pork', 'SUP001', 9999),
+('TOP002', 'Mushrooms', 'Fresh button mushrooms', 20.50, '2024-09-28', '2024-10-10', 'None', 'SUP002', 150),
+('TOP003', 'Green Peppers', 'Sliced green bell peppers', 15.00, '2024-09-28', '2024-10-12', 'None', 'SUP003', 50),
+('TOP004', 'Onions', 'Sliced onions', 10.00, '2024-09-28', '2024-10-15', 'None', 'SUP004', 40),
+('TOP005', 'Olives', 'Black olives', 25.00, '2024-09-28', '2024-10-20', 'None', 'SUP005', 60),
+('TOP006', 'Bacon', 'Crispy bacon bits', 30.00, '2024-09-28', '2024-10-08', 'Pork', 'SUP006', 500),
+('TOP007', 'Extra Cheese', 'Additional cheese', 22.00, '2024-09-28', '2024-10-30', 'Dairy', 'SUP007', 200),
+('TOP008', 'Chicken', 'Grilled chicken pieces', 40.00, '2024-09-28', '2024-10-25', 'Poultry', 'SUP008', 300),
+('TOP009', 'Spinach', 'Fresh spinach leaves', 18.00, '2024-09-28', '2024-10-12', 'None', 'SUP009', 30),
+('TOP010', 'Pineapple', 'Sweet pineapple chunks', 16.50, '2024-09-28', '2024-10-18', 'None', 'SUP010', 70);
+
+--
+CREATE TABLE AUDIT_TOPPING (
+    AUTH_ID CHAR (6) PRIMARY KEY,
+    USER_ID CHAR (9),
+    TOP_CODE CHAR (6),
+    DATE_CHANGED DATE,
+    TIME_CHANGED TIME,
+    OLD_PRICE DECIMAL (3, 2),
+    NEW_PRICE DECIMAL (3, 2),
+    REASON_FOR_CHANGE VARCHAR (50),
+    FOREIGN KEY (USER_ID) REFERENCES USER(USER_ID) ON DELETE CASCADE ,
+    FOREIGN KEY (TOP_CODE) REFERENCES TOPPING(TOP_CODE) ON DELETE CASCADE 
+);
+
+INSERT INTO AUDIT_TOPPING (AUTH_ID, USER_ID, TOP_CODE, DATE_CHANGED, TIME_CHANGED, OLD_PRICE, NEW_PRICE, REASON_FOR_CHANGE) 
+VALUES 
+('123456', 'PRIUGB123', 'TOP001', '2024-10-01', '10:00:00', 1.50, 1.75, 'Price adjustment'),
+('123457', 'JOHDOE234', 'TOP002', '2024-10-02', '11:15:00', 20.00, 22.00, 'Updated pricing'),
+('123458', 'MARSMI567', 'TOP003', '2024-10-03', '09:30:00', 15.00, 16.50, 'Seasonal price increase'),
+('123459', 'ALIBRO999', 'TOP004', '2024-10-04', '14:45:00', 10.00, 11.00, 'Market adjustment'),
+('123460', 'BOBJOH567', 'TOP005', '2024-10-05', '08:20:00', 25.00, 27.00, 'Supplier change'),
+('123461', 'CHAWHI901', 'TOP006', '2024-10-06', '16:05:00', 30.00, 32.50, 'Promotional adjustment'),
+('123462', 'EVEJON888', 'TOP007', '2024-10-07', '12:00:00', 22.00, 23.50, 'Cost increase'),
+('123463', 'FRAMIL002', 'TOP008', '2024-10-08', '10:30:00', 40.00, 42.00, 'New supplier contract'),
+('123464', 'GRADAV555', 'TOP009', '2024-10-09', '15:25:00', 18.00, 19.00, 'Quality improvement'),
+('123465', 'HANTHO000', 'TOP010', '2024-10-10', '13:40:00', 16.50, 17.00, 'Regular adjustment');
+
+
+CREATE TABLE BASE (
+    BASE_CODE CHAR (6) PRIMARY KEY,
+    SIZE_OF_PIZZA CHAR (1),
+    CRUST_TYPE VARCHAR (20),
+    AVAILABLE_UNITS INTEGER,
+    BASE_PRICE DECIMAL (3, 2),
+    BASE_CALORIES INTEGER,
+    BASE_PRODUCTION_DATE DATE,
+    BASE_EXPIRY_DATE DATE,
+    SUPPLIER_ID CHAR (6),
+    FOREIGN KEY (SUPPLIER_ID) REFERENCES SUPPLIER(SUPPLIER_ID) ON DELETE CASCADE 
+    );
+    
+INSERT INTO BASE (BASE_CODE, SIZE_OF_PIZZA, CRUST_TYPE, AVAILABLE_UNITS, BASE_PRICE, BASE_CALORIES, BASE_PRODUCTION_DATE, BASE_EXPIRY_DATE, SUPPLIER_ID) 
+VALUES 
+('BASE01', 'L', 'Thin Crust', 100, 50.00, 200, '2024-01-01', '2025-01-01', 'SUP001'),
+('BASE02', 'M', 'Thick Crust', 80, 60.00, 250, '2024-02-01', '2025-02-01', 'SUP002'),
+('BASE03', 'S', 'Stuffed Crust', 50, 55.00, 300, '2024-03-01', '2025-03-01', 'SUP003'),
+('BASE04', 'L', 'Gluten Free', 70, 65.00, 220, '2024-04-01', '2025-04-01', 'SUP001'),
+('BASE05', 'M', 'Whole Wheat', 90, 58.00, 210, '2024-05-01', '2025-05-01', 'SUP002'),
+('BASE06', 'L', 'Cheese Burst', 40, 70.00, 320, '2024-06-01', '2025-06-01', 'SUP001'),
+('BASE07', 'M', 'Herb Crust', 60, 62.00, 180, '2024-07-01', '2025-07-01', 'SUP002'),
+('BASE08', 'S', 'Flatbread', 90, 45.00, 150, '2024-08-01', '2025-08-01', 'SUP003'),
+('BASE09', 'L', 'Deep Dish', 30, 75.00, 400, '2024-09-01', '2025-09-01', 'SUP001'),
+('BASE10', 'M', 'Cornmeal Crust', 50, 67.00, 250, '2024-10-01', '2025-10-01', 'SUP002');
+
+CREATE TABLE ORDERS (
+    ORDER_ID CHAR (6) PRIMARY KEY,
+    CUSTOMER_ID CHAR (6),
+    GRATUITY_TIP DECIMAL (6, 2), 
+    ORDER_DATE DATE,
+    ORDER_TIME TIME,
+    ORDER_STATUS VARCHAR (10),
+    PAYMENT_TYPE VARCHAR (6),
+    ORDER_PRICE DECIMAL (6, 2),
+    FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMER(CUSTOMER_ID) ON DELETE CASCADE);
+    
+INSERT INTO ORDERS (ORDER_ID, CUSTOMER_ID, GRATUITY_TIP, ORDER_DATE, ORDER_TIME, ORDER_STATUS, PAYMENT_TYPE, ORDER_PRICE) 
+VALUES 
+('ORD001', 'CUST01', 10.00, '2024-10-01', '18:30:00', 'Completed', 'Credit Card', 85.50),
+('ORD002', 'CUST02', 10.00, '2024-10-01', '19:00:00', 'Pending', 'Cash', 95.00),
+('ORD003', 'CUST03', 10.00, '2024-10-01', '19:15:00', 'Completed', 'Debit Card', 80.00),
+('ORD004', 'CUST04', 10.00, '2024-10-01', '19:45:00', 'Canceled', 'Credit Card', 100.00),
+('ORD005', 'CUST05', 10.00, '2024-10-01', '20:00:00', 'Completed', 'Cash', 90.00),
+('ORD006', 'CUST01', 10.00, '2024-10-02', '18:00:00', 'Pending', 'Debit Card', 110.00),
+('ORD007', 'CUST02', 10.00, '2024-10-02', '18:30:00', 'Completed', 'Credit Card', 85.00),
+('ORD008', 'CUST03', 10.00, '2024-10-02', '19:00:00', 'Completed', 'Cash', 70.00),
+('ORD009', 'CUST04', 10.00, '2024-10-02', '19:30:00', 'Pending', 'Credit Card', 120.00),
+('ORD010', 'CUST05', 10.00, '2024-10-02', '20:00:00', 'Completed', 'Debit Card', 95.00);
+     
+
+CREATE TABLE PIZZA (
+    PIZZA_NR CHAR (6) PRIMARY KEY,
+    BASE_CODE CHAR (6),
+    ORDER_ID  CHAR (4),
+    PIZZA_NAME VARCHAR (50),
+    PIZZA_DESCRIPTION VARCHAR (150),
+    PIZZA_PRICE DECIMAL (6, 2),
+    PREP_TIME TIME,
+    MENU_CATEGORY CHAR (4),
+    FOREIGN KEY (BASE_CODE) REFERENCES BASE(BASE_CODE) ON DELETE CASCADE ,
+    FOREIGN KEY (ORDER_ID) REFERENCES ORDERS(ORDER_ID) ON DELETE CASCADE 
+    );
+    
+INSERT INTO PIZZA (PIZZA_NR, BASE_CODE, ORDER_ID, PIZZA_NAME, PIZZA_DESCRIPTION, PIZZA_PRICE, PREP_TIME, MENU_CATEGORY)
+VALUES 
+('PIZ001', 'BASE01', 'ORD001', 'Margherita', 'Classic pizza with cheese and tomato sauce', 85.50, '00:30:00', 'VEG'),
+('PIZ002', 'BASE02', 'ORD002', 'Pepperoni', 'Spicy pepperoni with cheese', 95.00, '00:35:00', 'MEAT'),
+('PIZ003', 'BASE03', 'ORD003', 'Veggie Delight', 'Loaded with fresh vegetables', 80.00, '00:25:00', 'VEG'),
+('PIZ004', 'BASE04', 'ORD004', 'BBQ Chicken', 'Grilled chicken with BBQ sauce', 100.00, '00:40:00', 'MEAT'),
+('PIZ005', 'BASE05', 'ORD005', 'Hawaiian', 'Ham and pineapple topped pizza', 90.00, '00:30:00', 'VEG'),
+('PIZ006', 'BASE06', 'ORD006', 'Cheese Burst', 'Rich cheese burst crust with extra cheese', 110.00, '00:30:00', 'MEAT'),
+('PIZ007', 'BASE07', 'ORD007', 'Herb Crust Special', 'Herb-infused crust with assorted toppings', 85.00, '00:25:00', 'VEG'),
+('PIZ008', 'BASE08', 'ORD008', 'Flatbread Pizza', 'Light flatbread topped with vegetables', 70.00, '00:20:00', 'VEG'),
+('PIZ009', 'BASE09', 'ORD009', 'Deep Dish Delight', 'Deep dish pizza with layers of cheese and toppings', 120.00, '00:45:00', 'MEAT'),
+('PIZ010', 'BASE10', 'ORD010', 'Cornmeal Crust Pizza', 'Unique cornmeal crust with spicy toppings', 95.00, '00:35:00', 'MEAT');
+
+CREATE TABLE PIZZA_TOPPING (
+    TOP_CODE CHAR(4),
+    PIZZA_NR CHAR(4),
+    BASE_CODE CHAR(4),
+    IS_CUSTOM INTEGER,
+    NUMBER_OF_LAYERS INTEGER,
+    IS_VEGAN_FRIENDLY INTEGER,
+    SERVING_TEMP INTEGER,
+    TOTAL_PRICE DECIMAL(6, 2),
+    TOTAL_CALORIES INTEGER,
+
+    PRIMARY KEY (TOP_CODE, PIZZA_NR),  -- Composite primary key
+    FOREIGN KEY (TOP_CODE) REFERENCES TOPPING(TOP_CODE) ON DELETE CASCADE,
+    FOREIGN KEY (PIZZA_NR) REFERENCES PIZZA(PIZZA_NR) ON DELETE CASCADE 
+);
+
+INSERT INTO PIZZA_TOPPING (TOP_CODE, PIZZA_NR, BASE_CODE, IS_CUSTOM, NUMBER_OF_LAYERS, IS_VEGAN_FRIENDLY, SERVING_TEMP, TOTAL_PRICE, TOTAL_CALORIES)
+VALUES 
+('TOP001', 'PIZ001', 'BASE01', 0, 1, 0, 75, 121.49, 300),  
+('TOP002', 'PIZ002', 'BASE02', 0, 1, 0, 80, 115.99, 280),  
+('TOP003', 'PIZ003', 'BASE03', 1, 2, 1, 70, 102.00, 200),  
+('TOP004', 'PIZ004', 'BASE04', 0, 1, 0, 85, 130.00, 400),  
+('TOP005', 'PIZ005', 'BASE05', 1, 3, 1, 75, 125.00, 350),  
+('TOP006', 'PIZ006', 'BASE06', 0, 1, 0, 80, 145.00, 450),  
+('TOP007', 'PIZ007', 'BASE07', 1, 2, 1, 70, 120.00, 300),  
+('TOP008', 'PIZ008', 'BASE08', 0, 1, 0, 75, 95.00, 250),   
+('TOP009', 'PIZ009', 'BASE09', 1, 1, 0, 85, 140.00, 500),  
+('TOP010', 'PIZ010', 'BASE10', 0, 1, 0, 80, 125.00, 400);  
+
+
+
+DELETE From SUPPLIER
+WHERE SUPPLIER_ID = 'SUP009';
+DELETE From SUPPLIER
+WHERE SUPPLIER_ID = 'SUP010';
+
+DELETE From USER
+WHERE USER_ID = 'GRADAV555';
+DELETE From USER
+WHERE USER_ID = 'HANTHO000';
+
+DELETE From TOPPING
+WHERE TOP_CODE = 'TOP009';
+DELETE From TOPPING
+WHERE TOP_CODE = 'TOP010';
+
+DELETE From AUDIT_TOPPING
+WHERE AUTH_ID = '123464';
+DELETE From AUDIT_TOPPING
+WHERE AUTH_ID = '123465';
+
+DELETE From CUSTOMER
+WHERE CUSTOMER_ID = 'CUST09';
+DELETE From CUSTOMER
+WHERE CUSTOMER_ID = 'CUST10';
+--
+DELETE From BASE
+WHERE BASE_CODE = 'BASE09';
+DELETE From BASE
+WHERE BASE_CODE = 'BASE10';
+
+DELETE From ORDERS
+WHERE ORDER_ID = 'ORD009';
+DELETE From ORDERS
+WHERE ORDER_ID = 'ORD010';
+--    
+DELETE From PIZZA
+WHERE PIZZA_NR = 'PIZ009';
+DELETE From PIZZA
+WHERE PIZZA_NR = 'PIZ010';
+
+DELETE FROM PIZZA_TOPPING
+WHERE TOP_CODE = 'TOP009' AND PIZZA_NR = 'PIZ009';
+DELETE FROM PIZZA_TOPPING
+WHERE TOP_CODE = 'TOP010' AND PIZZA_NR = 'PIZ010';
+
+UPDATE SUPPLIER 
+SET SUPPLIER_NAME = 'Milk Supplier', 
+    SUPPLIER_EMAIL = 'milk@dairyproducts.com', 
+    SUPPLIER_TYPE = 'Milk Supplier'
+WHERE SUPPLIER_ID = 'SUP001';
+
+UPDATE SUPPLIER 
+SET SUPPLIER_NAME = 'Bread Products Inc.', 
+    SUPPLIER_EMAIL = 'bread@dairyproducts.com', 
+    SUPPLIER_TYPE = 'Bread Supplier'
+WHERE SUPPLIER_ID = 'SUP002';
+
+
+
+
+UPDATE USER 
+SET USER_PASSWORD = 'Kel123', 
+    USER_EMAIL_ADDRESS = 'kel123@gmail.com', 
+    USER_NAME = 'Kelsey'
+WHERE USER_ID = 'PRIUGB123';
+
+
+
+UPDATE USER 
+SET USER_PASSWORD = 'Cait123', 
+    USER_EMAIL_ADDRESS = 'Cait123@gmail.com', 
+    USER_NAME = 'Caitlin'
+WHERE USER_ID = 'JOHDOE234';
+
+
+
+
+UPDATE CUSTOMER 
+SET CUSTOMER_PHONE = '0712223333', 
+    CUSTOMER_EMAIL = 'mandy.tank@newmail.com'
+WHERE CUSTOMER_ID = 'CUST01';
+
+UPDATE CUSTOMER 
+SET CUSTOMER_PHONE = '0762123456', 
+    CUSTOMER_EMAIL = 'tanny.tank@newmail.com'
+WHERE CUSTOMER_ID = 'CUST02';
+
+
+
+
+UPDATE TOPPING 
+SET TOP_PRICE = 50.99, 
+    TOP_DESCRIPTION = 'Gerkins', 
+    ALLERGEN_INFO = 'Vinegar'
+WHERE TOP_CODE = 'TOP001';
+
+UPDATE TOPPING 
+SET TOP_PRICE = 20.99, 
+    TOP_DESCRIPTION = 'Spicy and delicious salami', 
+    ALLERGEN_INFO = 'Pork, Gluten'
+WHERE TOP_CODE = 'TOP002';
+
+
+
+UPDATE AUDIT_TOPPING 
+SET NEW_PRICE = 4.80, 
+    REASON_FOR_CHANGE = 'Adjusted for inflation'
+WHERE AUTH_ID = '123456';
+
+UPDATE AUDIT_TOPPING 
+SET NEW_PRICE = 3.90, 
+    REASON_FOR_CHANGE = 'Customer favourite'
+WHERE AUTH_ID = '123457';
+
+
+
+
+UPDATE BASE 
+SET BASE_PRICE = 76.00, 
+    AVAILABLE_UNITS = 23 
+WHERE BASE_CODE = 'BASE01';
+
+UPDATE BASE 
+SET BASE_PRICE = 45.00, 
+    AVAILABLE_UNITS = 42 
+WHERE BASE_CODE = 'BASE02';
+
+
+
+
+UPDATE ORDERS 
+SET GRATUITY_TIP = 25.00, 
+    ORDER_STATUS = 'Completed'
+WHERE ORDER_ID = 'ORD001';
+
+UPDATE ORDERS 
+SET GRATUITY_TIP = 45.00, 
+    ORDER_STATUS = 'Completed'
+WHERE ORDER_ID = 'ORD002';
+
+
+
+
+
+
+
+UPDATE PIZZA 
+SET PIZZA_PRICE = 98.50, 
+    PIZZA_DESCRIPTION = 'Meaty pizza'
+WHERE PIZZA_NR = 'PIZ001';
+
+UPDATE PIZZA 
+SET PIZZA_PRICE = 105.50, 
+    PIZZA_DESCRIPTION = 'Classic pizza with cheese and tomato sauce'
+WHERE PIZZA_NR = 'PIZ002';
+
+
+
+
+
+
+
+UPDATE PIZZA_TOPPING 
+SET IS_CUSTOM = 1, 
+    NUMBER_OF_LAYERS = 2, 
+    TOTAL_PRICE = 90.00
+WHERE TOP_CODE = 'TOP001' AND PIZZA_NR = 'PIZ001';
+
+UPDATE PIZZA_TOPPING 
+SET IS_CUSTOM = 1, 
+    NUMBER_OF_LAYERS = 2, 
+    TOTAL_PRICE = 110.00
+WHERE TOP_CODE = 'TOP002' AND PIZZA_NR = 'PIZ002';
+
+
+
+
+
+INSERT INTO SUPPLIER (SUPPLIER_ID, SUPPLIER_NAME, SUPPLIER_EMAIL, SUPPLIER_TYPE, SUPPLIER_STREET_NUMBER, SUPPLIER_STREET_NAME, SUPPLIER_SUBURB, SUPPLIER_CITY, DATE_OF_CONTRACT)
+VALUES
+('SUP009', 'Organic Grocers', 'info@organicgrocers.com', 'Organic Supplier', 606, 'Green St', 'Naturetown', 'Springfield', '2023-09-01'),
+('SUP010', 'Frozen Foods LLC', 'support@frozenfoods.com', 'Frozen Supplier', 707, 'Ice Rd', 'Chilltown', 'Springfield', '2022-10-20');
+
+INSERT INTO TOPPING (TOP_CODE, TOP_NAME, TOP_DESCRIPTION, TOP_PRICE, TOP_ORDER_DATE, TOP_EXPIRY_DATE, ALLERGEN_INFO, SUPPLIER_ID, TOPPING_CALORIES)
+VALUES
+('TOP009', 'Spinach', 'Fresh spinach leaves', 18.00, '2024-09-28', '2024-10-12', 'None', 'SUP009', 30),
+('TOP010', 'Pineapple', 'Sweet pineapple chunks', 16.50, '2024-09-28', '2024-10-18', 'None', 'SUP010', 70);
+
+INSERT INTO USER (USER_ID, USER_PASSWORD, USER_EMAIL_ADDRESS, USER_NAME, USER_SURNAME, USER_STREET_NUMBER, USER_STREET_NAME, USER_SUBURB, USER_CITY, USER_ROLE) 
+VALUES 
+('GRADAV555', 'gracepass', 'grace.davis@hotmail.com', 'Grace', 'Davis', 808, 'Eighth Rd', 'Seaside', 'Cape Town', 'User'),
+('HANTHO000', 'hankpass', 'hank.thompson@gmail.com', 'Hank', 'Thompson', 909, 'Ninth Blvd', 'Hillside', 'Durban', 'User');
+
+INSERT INTO AUDIT_TOPPING (AUTH_ID, USER_ID, TOP_CODE, DATE_CHANGED, TIME_CHANGED, OLD_PRICE, NEW_PRICE, REASON_FOR_CHANGE) 
+VALUES 
+('123464', 'GRADAV555', 'TOP009', '2024-10-09', '15:25:00', 18.00, 19.00, 'Quality improvement'),
+('123465', 'HANTHO000', 'TOP010', '2024-10-10', '13:40:00', 16.50, 17.00, 'Regular adjustment');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, CUSTOMER_SURNAME, CUSTOMER_PHONE, CUSTOMER_EMAIL, CUSTOMER_STREET_NUMBER, CUSTOMER_STREET_NAME, CUSTOMER_SUBURB, CUSTOMER_CITY)
+VALUES 
+('CUST09', 'Ivy', 'Wilson', '0760123456', 'ivy.wilson@example.com', 909, 'Ninth Blvd', 'Seaside', 'Cape Town'),
+('CUST10', 'Jack', 'Garcia', '0781234567', 'jack.garcia@example.com', 100, 'Tenth St', 'Bayview', 'Cape Town');
+
+INSERT INTO BASE (BASE_CODE, SIZE_OF_PIZZA, CRUST_TYPE, AVAILABLE_UNITS, BASE_PRICE, BASE_CALORIES, BASE_PRODUCTION_DATE, BASE_EXPIRY_DATE, SUPPLIER_ID) 
+VALUES 
+('BASE09', 'L', 'Deep Dish', 30, 75.00, 400, '2024-09-01', '2025-09-01', 'SUP001'),
+('BASE10', 'M', 'Cornmeal Crust', 50, 67.00, 250, '2024-10-01', '2025-10-01', 'SUP002');
+
+
+INSERT INTO ORDERS (ORDER_ID, CUSTOMER_ID, GRATUITY_TIP, ORDER_DATE, ORDER_TIME, ORDER_STATUS, PAYMENT_TYPE, ORDER_PRICE) 
+VALUES 
+('ORD009', 'CUST04', '10.00', '2024-10-02', '19:30:00', 'Pending', 'Credit Card', 120.00),
+('ORD010', 'CUST05', '10.00', '2024-10-02', '20:00:00', 'Completed', 'Debit Card', 95.00);
+
+INSERT INTO PIZZA (PIZZA_NR, BASE_CODE, ORDER_ID, PIZZA_NAME, PIZZA_DESCRIPTION, PIZZA_PRICE, PREP_TIME, MENU_CATEGORY)
+VALUES 
+('PIZ009', 'BASE04', 'ORD009', 'Spicy BBQ Chicken', 'BBQ chicken with jalapeños and onions', 105.00, '00:40:00', 'MEAT'),
+('PIZ010', 'BASE05', 'ORD008', 'Caprese Pizza', 'Fresh mozzarella, tomatoes, and basil', 90.00, '00:25:00', 'VEG');
+
+INSERT INTO PIZZA_TOPPING (TOP_CODE, PIZZA_NR, BASE_CODE, IS_CUSTOM, NUMBER_OF_LAYERS, IS_VEGAN_FRIENDLY, SERVING_TEMP, TOTAL_PRICE, TOTAL_CALORIES)
+VALUES
+('TOP009', 'PIZ009', 'BASE09', 1, 1, 0, 85, 140.00, 500),  
+('TOP010', 'PIZ010', 'BASE10', 0, 1, 0, 80, 125.00, 400); 
+
+--reset code
+
+UPDATE SUPPLIER
+SET SUPPLIER_NAME = 'Dairy Goods Ltd.', 
+    SUPPLIER_EMAIL = 'info@dairygoods.com', 
+    SUPPLIER_TYPE = 'Flour Supplier'
+WHERE SUPPLIER_ID = 'SUP001';
+
+UPDATE SUPPLIER
+SET SUPPLIER_NAME = 'Fresh Produce Co.', 
+    SUPPLIER_EMAIL = 'contact@freshproduce.com', 
+    SUPPLIER_TYPE = 'Food Supplier'
+WHERE SUPPLIER_ID = 'SUP002';
+
+UPDATE USER 
+SET USER_PASSWORD = 'ice747', 
+    USER_EMAIL_ADDRESS = 'priugb@gmail.com', 
+    USER_NAME = 'Princess'
+WHERE USER_ID = 'PRIUGB123';
+
+UPDATE USER 
+SET USER_PASSWORD = 'pass123', 
+    USER_EMAIL_ADDRESS = 'john.doe@gmail.com', 
+    USER_NAME = 'John'
+WHERE USER_ID = 'JOHDOE234';
+
+
+UPDATE CUSTOMER 
+SET CUSTOMER_PHONE = '0612345678', 
+    CUSTOMER_EMAIL = 'andy.tank@example.com'
+WHERE CUSTOMER_ID = 'CUST01';
+
+UPDATE CUSTOMER 
+SET CUSTOMER_PHONE = '0612345678', 
+    CUSTOMER_EMAIL = 'bob.smith@example.com'
+WHERE CUSTOMER_ID = 'CUST02';
+
+UPDATE TOPPING 
+SET TOP_PRICE = 35.99, 
+    TOP_DESCRIPTION = 'Spicy salami', 
+    ALLERGEN_INFO = 'Pork'
+WHERE TOP_CODE = 'TOP001';
+
+UPDATE TOPPING 
+SET TOP_PRICE = 20.50, 
+    TOP_DESCRIPTION = 'Fresh button mushrooms', 
+    ALLERGEN_INFO = 'None'
+WHERE TOP_CODE = 'TOP002';
+
+UPDATE AUDIT_TOPPING 
+SET NEW_PRICE = 1.75, 
+    REASON_FOR_CHANGE = 'Price adjustment'
+WHERE AUTH_ID = '123456';
+
+UPDATE AUDIT_TOPPING 
+SET NEW_PRICE = 22.00, 
+    REASON_FOR_CHANGE = 'Updated pricing'
+WHERE AUTH_ID = '123457';
+
+UPDATE BASE 
+SET BASE_PRICE = 50.00, 
+    AVAILABLE_UNITS = 100 
+WHERE BASE_CODE = 'BASE01';
+
+UPDATE BASE 
+SET BASE_PRICE = 60.00, 
+    AVAILABLE_UNITS = 80 
+WHERE BASE_CODE = 'BASE02';
+
+
+UPDATE ORDERS 
+SET GRATUITY_TIP = 10.00, 
+    ORDER_STATUS = 'Completed'
+WHERE ORDER_ID = 'ORD001';
+
+UPDATE ORDERS 
+SET GRATUITY_TIP = 10.00, 
+    ORDER_STATUS = 'Pending'
+WHERE ORDER_ID = 'ORD002';
+
+UPDATE PIZZA 
+SET PIZZA_PRICE = 85.50, 
+    PIZZA_DESCRIPTION = 'Classic pizza with cheese and tomato sauce'
+WHERE PIZZA_NR = 'PIZ001';
+
+UPDATE PIZZA 
+SET PIZZA_PRICE = 95.00, 
+    PIZZA_DESCRIPTION = 'Spicy pepperoni with cheese'
+WHERE PIZZA_NR = 'PIZ002';
+
+
+UPDATE PIZZA_TOPPING 
+SET IS_CUSTOM = 0, 
+    NUMBER_OF_LAYERS = 1, 
+    TOTAL_PRICE = 121.49
+WHERE TOP_CODE = 'TOP001' AND PIZZA_NR = 'PIZ001';
+
+UPDATE PIZZA_TOPPING 
+SET IS_CUSTOM = 0, 
+    NUMBER_OF_LAYERS = 1, 
+    TOTAL_PRICE = 115.99
+WHERE TOP_CODE = 'TOP002' AND PIZZA_NR = 'PIZ002';
+
+CREATE VIEW SUPPLIER_VIEW AS
+SELECT
+    SUPPLIER_ID AS DISTRIBUTOR_CODE,
+    SUPPLIER_NAME AS DISTRIBUTOR_NAME,
+    SUPPLIER_EMAIL AS DISTRIBUTOR_EMAIL,
+    SUPPLIER_TYPE AS DISTRIBUTOR_CATEGORY,
+    SUPPLIER_STREET_NUMBER AS DISTRIBUTOR_WAREHOUSE_NUMBER,
+    SUPPLIER_STREET_NAME AS DISTRIBUTOR_PLACE_NAME,
+    SUPPLIER_SUBURB AS DISTRIBUTOR_RESIDENCE
+FROM SUPPLIER;
+
+CREATE VIEW TOPPING_VIEW AS
+SELECT
+    TOP_CODE AS TOPPING_ID,
+    TOP_NAME AS TOPPING_NAME,
+    TOP_DESCRIPTION AS TOPPING_DESCRIPTION,
+    TOP_PRICE AS PRICE_OF_TOPPING,
+    TOP_ORDER_DATE AS TOPPING_PURCHASE_DATE,
+    TOP_EXPIRY_DATE AS TOPPING_BEST_BEFORE_DATE,
+    ALLERGEN_INFO AS ALLERGEN_CONTAINS
+FROM TOPPING;
+
+CREATE VIEW USER_VIEW AS
+SELECT
+    USER_ID AS USER_CODE,
+    USER_PASSWORD AS USER_ACCESS_CODE,
+    USER_EMAIL_ADDRESS AS USER_CONTACT_EMAIL,
+    USER_NAME AS USER_FIRST_NAME,
+    USER_SURNAME AS USER_LAST_NAME
+    
+FROM USER;
+
+CREATE VIEW AUDIT_TOPPING_VIEW AS
+SELECT
+    AUTH_ID AS AUTH_CODE,
+    USER_ID AS USER_CODE,
+    TOP_CODE AS TOPPING_ID,
+    DATE_CHANGED AS DATE_MODIFIED,
+    TIME_CHANGED AS TIME_MODIFIED,
+    OLD_PRICE AS PERVIOUS_PRICE
+FROM AUDIT_TOPPING;
+
+CREATE VIEW CUSTOMER_VIEW AS
+SELECT
+    CUSTOMER_ID AS CLIENT_CODE,
+    CUSTOMER_NAME AS CLIENT_FIRST_NAME,
+    CUSTOMER_SURNAME AS CLIENT_LAST_NAME,
+    CUSTOMER_PHONE AS CLIENT_TELEPHONE,
+    CUSTOMER_EMAIL AS CLIENT_CONTACT_EMAIL
+FROM CUSTOMER;
+
+CREATE VIEW BASE_VIEW AS
+SELECT
+    BASE_CODE AS BASE_ID,
+    SIZE_OF_PIZZA AS PIZZA_SIZE,
+    CRUST_TYPE AS BASE_LAYER_TYPE,
+    AVAILABLE_UNITS AS QUANTITY_ON_HAND,
+    BASE_PRICE AS PRICE_OF_BASE,
+    BASE_CALORIES AS CALRORIE_COUNT,
+    BASE_PRODUCTION_DATE AS MANUFACTURE_DATE 
+FROM BASE;
+
+CREATE VIEW PIZZA_VIEW AS
+SELECT
+    PIZZA_NR AS PIZZA_CODE,    
+    BASE_CODE AS BASE_ID,
+    ORDER_ID AS ORDER_CODE,
+    PIZZA_NAME AS NAME_OF_PIZZA,
+    PIZZA_PRICE AS PRICE_OF_PIZZA,
+    PREP_TIME AS PREP_DURATION
+FROM PIZZA;
+
+CREATE VIEW ORDERS_VIEW AS
+SELECT
+    ORDER_ID AS ORDER_CODE,
+    CUSTOMER_ID AS CLIENT_CODE,
+    PIZZA_NR  AS PIZZA_CODE,
+    ORDER_DATE AS PURCHASE_CODE,
+    ORDER_TIME AS TIME_OF_PURCHASE,
+    ORDER_STATUS AS PURCHASE_PROGRESS
+FROM ORDERS;
+
+CREATE VIEW PIZ_TOP_VIEWS AS
+SELECT
+    TOP_CODE AS T_CODE,
+    GRATITUITY_TIP AS TIP,
+    BASE_CODE AS BASE,
+    IS_CUSTOM AS IS_CUSTOM,
+    NUMBER_OF_LAYERS AS LAYERS,
+    SERVING_TEMP AS TMP
+FROM PIZZA_TOPPING;
+
+
+SELECT * FROM [SUPPLIER_VIEW];
+SELECT * FROM [TOPPING_VIEW];
+SELECT * FROM [USER_VIEW];
+SELECT * FROM [AUDIT_TOPPING_VIEW];
+SELECT * FROM [CUSTOMER_VIEW];
+SELECT * FROM [BASE_VIEW];
+SELECT * FROM [PIZZA_VIEW];
+SELECT * FROM [ORDERS_VIEW];
+SELECT * FROM [PIZ_TOP_VIEWS];
